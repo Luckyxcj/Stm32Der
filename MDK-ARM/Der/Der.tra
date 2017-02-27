@@ -1,0 +1,48 @@
+*** Creating Trace Output File 'Der\Der.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"der\stm32f1xx_hal_gpio.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_cortex.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_rcc_ex.o"'
+### List of Objects: adding '"der\stm32f1xx_hal.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_rcc.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_pwr.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_dma.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_gpio_ex.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_tim_ex.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_flash.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_uart.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_tim.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_flash_ex.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_timebase_tim.o"'
+### List of Objects: adding '"der\stm32f1xx_it.o"'
+### List of Objects: adding '"der\main.o"'
+### List of Objects: adding '"der\freertos.o"'
+### List of Objects: adding '"der\stm32f1xx_hal_msp.o"'
+### List of Objects: adding '"der\system_stm32f1xx.o"'
+### List of Objects: adding '"der\startup_stm32f103xb.o"'
+### List of Objects: adding '"der\croutine.o"'
+### List of Objects: adding '"der\port.o"'
+### List of Objects: adding '"der\heap_4.o"'
+### List of Objects: adding '"der\queue.o"'
+### List of Objects: adding '"der\timers.o"'
+### List of Objects: adding '"der\event_groups.o"'
+### List of Objects: adding '"der\cmsis_os.o"'
+### List of Objects: adding '"der\tasks.o"'
+### List of Objects: adding '"der\list.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "der\stm32f1xx_hal_gpio.o" "der\stm32f1xx_hal_cortex.o" "der\stm32f1xx_hal_rcc_ex.o" "der\stm32f1xx_hal.o" "der\stm32f1xx_hal_rcc.o" "der\stm32f1xx_hal_pwr.o" "der\stm32f1xx_hal_dma.o" "der\stm32f1xx_hal_gpio_ex.o" "der\stm32f1xx_hal_tim_ex.o" "der\stm32f1xx_hal_flash.o" "der\stm32f1xx_hal_uart.o" "der\stm32f1xx_hal_tim.o" "der\stm32f1xx_hal_flash_ex.o" "der\stm32f1xx_hal_timebase_tim.o" "der\stm32f1xx_it.o" "der\main.o" "der\freertos.o" "der\stm32f1xx_hal_msp.o" "der\system_stm32f1xx.o" "der\startup_stm32f103xb.o" "der\croutine.o" "der\port.o" "der\heap_4.o" "der\queue.o" "der\timers.o" "der\event_groups.o" "der\cmsis_os.o" "der\tasks.o" "der\list.o" 
+--library_type=microlib --strict --scatter "Der\Der.sct" 
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list "Der.map" -o Der\Der.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'Der\Der.axf'
+### ADS-LD Command File: 'Der\Der.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'Der\Der.lnp', Handle=0x00000878
+### Writing '.lnp' file
+### ADS-LD Command file 'Der\Der.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
