@@ -29,11 +29,10 @@
 "der\tasks.o"
 "der\list.o"
 "der\lcd_5510_main.o"
-"der\led.o"
-"der\commander.o"
-"der\task_main.o"
 "der\shell.o"
+"der\commander.o"
 "der\display.o"
+"der\task_main.o"
 --library_type=microlib --strict --scatter "Der\Der.sct"
 
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols

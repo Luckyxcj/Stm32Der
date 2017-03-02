@@ -46,3 +46,4 @@ der\shell.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 der\shell.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 der\shell.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 der\shell.o: ..\Firmware\Drivers\LOG\shell.h
+der\shell.o: ..\Firmware\APP\display\inc\display.h

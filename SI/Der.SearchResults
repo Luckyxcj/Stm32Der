@@ -1,0 +1,2 @@
+---- NOKIA5110_LED_ON Matches (1 in 1 files) ----
+Include.h (firmware\drivers\5510\inc):#define NOKIA5110_LED_ON	P2OUT |= BIT0

@@ -46,5 +46,5 @@ der\task_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 der\task_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 der\task_main.o: ..\Firmware\Drivers\LOG\shell.h
 der\task_main.o: ../Inc/defs.h
-der\task_main.o: ..\Firmware\APP\task_main\inc\task_main.h
 der\task_main.o: ..\Firmware\APP\display\inc\display.h
+der\task_main.o: ..\Firmware\APP\task_main\inc\task_main.h

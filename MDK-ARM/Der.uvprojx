@@ -147,7 +147,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>11</TargetSelection>
+          <TargetSelection>6</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -161,7 +161,7 @@
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
             <InitializationFile></InitializationFile>
-            <Driver>STLink\ST-LINKIII-KEIL_SWO.dll</Driver>
+            <Driver>Segger\JL2CM3.dll</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -365,7 +365,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Drivers/CMSIS/Include;..\Firmware\APP\commander\inc;..\Firmware\APP\display\inc;..\Firmware\APP\task_main\inc;..\Firmware\Drivers\5510\inc;..\Firmware\Drivers\LED\inc;..\Firmware\Drivers\LOG</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -580,14 +580,36 @@
         </Group>
         <Group>
           <GroupName>Firmware/Drivers</GroupName>
+          <Files>
+            <File>
+              <FileName>LCD_5510_main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Firmware\Drivers\5510\src\LCD_5510_main.c</FilePath>
+            </File>
+            <File>
+              <FileName>shell.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Firmware\Drivers\LOG\shell.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Firmware/APP</GroupName>
           <Files>
             <File>
+              <FileName>commander.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Firmware\APP\commander\src\commander.c</FilePath>
+            </File>
+            <File>
+              <FileName>display.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Firmware\APP\display\src\display.c</FilePath>
+            </File>
+            <File>
               <FileName>task_main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Firmware\APP\task_main\task_main.c</FilePath>
+              <FilePath>..\Firmware\APP\task_main\src\task_main.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -47,3 +47,4 @@ der\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 der\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 der\main.o: ..\Firmware\Drivers\LOG\shell.h
 der\main.o: ../Inc/defs.h
+der\main.o: ..\Firmware\APP\display\inc\display.h

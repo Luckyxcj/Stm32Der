@@ -27,7 +27,7 @@ void shell_main(void const * argument)
 {
     while(1)
     {
-        printf("AAAAAAA\r\n");
+      //  printf("AAAAAAA\r\n");
         osDelay(500);
     }
 }

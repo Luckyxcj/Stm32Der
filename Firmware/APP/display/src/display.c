@@ -1,16 +1,8 @@
 #include "display.h"
 #include "defs.h"
-enum dispaly_scheme
-{
-    LED,
-    LCD_1602,
-    LCD_5510,
-    OLED,
-    TFT_CLD,
-    DISPALY_MAX
-}dispaly_scheme;
 
-int dispaly_module_init(int scheme)
+
+int dispaly_module_init(DISPALY_SCHEME scheme)
 {
     switch (scheme)
     {
@@ -19,6 +11,7 @@ int dispaly_module_init(int scheme)
             break;
         case LCD_1602: 
             printf("LCD_1602");
+         
             break;
         case LCD_5510: 
             printf("LCD_5510");
@@ -29,10 +22,11 @@ int dispaly_module_init(int scheme)
         case TFT_CLD: 
             printf("TFT_CLD");
             break;
-        dafault: 
+        default: 
             printf("none one break");
             break;
     }
+    
     return 1;
 }
 
