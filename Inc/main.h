@@ -51,6 +51,12 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define F_CS_Pin GPIO_PIN_2
+#define F_CS_GPIO_Port GPIOA
+#define SD_CS_Pin GPIO_PIN_3
+#define SD_CS_GPIO_Port GPIOA
+#define JF24_RST_Pin GPIO_PIN_4
+#define JF24_RST_GPIO_Port GPIOA
 #define CLK_5510_Pin GPIO_PIN_0
 #define CLK_5510_GPIO_Port GPIOB
 #define BL_5510_Pin GPIO_PIN_1

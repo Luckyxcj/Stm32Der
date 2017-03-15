@@ -25,6 +25,7 @@ der\task_main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 der\task_main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 der\task_main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 der\task_main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+der\task_main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 der\task_main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 der\task_main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 der\task_main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
@@ -47,4 +48,10 @@ der\task_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups
 der\task_main.o: ..\Firmware\Drivers\LOG\shell.h
 der\task_main.o: ../Inc/defs.h
 der\task_main.o: ..\Firmware\APP\display\inc\display.h
+der\task_main.o: ..\Firmware\Drivers\5510\inc\LCD_5510_main.h
+der\task_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+der\task_main.o: ../Drivers/CMSIS/Include/core_cmFunc.h
+der\task_main.o: ..\Firmware\Drivers\SD\inc\sd.h
+der\task_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+der\task_main.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 der\task_main.o: ..\Firmware\APP\task_main\inc\task_main.h

@@ -37,7 +37,7 @@ extern void LCD_init(void)	;
 extern void LCD_clear(void);
 extern void LCD_set_XY(unsigned char X, unsigned char Y) ;
 extern void LCD_write_char(unsigned char c) ;
-extern void LCD_write_english_string(unsigned char X,unsigned char Y,char *s)	;
+extern void LCD_write_english_string(unsigned char X,unsigned char Y,char *s);
 extern void LCD_write_num_string(unsigned char X,unsigned char Y,const char *name,int i);
 extern void LCD_draw_bmp_pixel(unsigned char X,unsigned char Y,unsigned char *map,
                   unsigned char Pix_x,unsigned char Pix_y);
