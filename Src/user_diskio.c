@@ -73,9 +73,9 @@ static volatile DSTATUS Stat = STA_NOINIT;
            
 DSTATUS USER_initialize (BYTE pdrv);
 DSTATUS USER_status (BYTE pdrv);
-DRESULT USER_read (BYTE pdrv, BYTE *buff, DWORD sector, UINT count);
+DRESULT USER_read (BYTE pdrv, BYTE *buff, DWORD sector, UINT16 count);
 #if _USE_WRITE == 1
-  DRESULT USER_write (BYTE pdrv, const BYTE *buff, DWORD sector, UINT count);  
+  DRESULT USER_write (BYTE pdrv, const BYTE *buff, DWORD sector, UINT16 count);  
 #endif /* _USE_WRITE == 1 */
 #if _USE_IOCTL == 1
   DRESULT USER_ioctl (BYTE pdrv, BYTE cmd, void *buff);
@@ -138,7 +138,7 @@ DRESULT USER_read (
 	BYTE pdrv,      /* Physical drive nmuber to identify the drive */
 	BYTE *buff,     /* Data buffer to store read data */
 	DWORD sector,   /* Sector address in LBA */
-	UINT count      /* Number of sectors to read */
+	UINT16 count      /* Number of sectors to read */
 )
 {
   /* USER CODE BEGIN READ */
@@ -159,7 +159,7 @@ DRESULT USER_write (
 	BYTE pdrv,          /* Physical drive nmuber to identify the drive */
 	const BYTE *buff,   /* Data to be written */
 	DWORD sector,       /* Sector address in LBA */
-	UINT count          /* Number of sectors to write */
+	UINT16 count          /* Number of sectors to write */
 )
 { 
   /* USER CODE BEGIN WRITE */

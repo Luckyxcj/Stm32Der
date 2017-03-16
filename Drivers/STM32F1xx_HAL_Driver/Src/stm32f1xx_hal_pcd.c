@@ -433,14 +433,14 @@ void HAL_PCD_IRQHandler(PCD_HandleTypeDef *hpcd)
     }
     
     /* Handle Resume Interrupt */
-    if(__HAL_PCD_GET_FLAG(hpcd, USB_OTG_GINTSTS_WKUINT))
+    if(__HAL_PCD_GET_FLAG(hpcd, USB_OTG_GINTSTS_WKUINT16))
     {
      /* Clear the Remote Wake-up signalling */
       USBx_DEVICE->DCTL &= ~USB_OTG_DCTL_RWUSIG;
      
      HAL_PCD_ResumeCallback(hpcd);
      
-     __HAL_PCD_CLEAR_FLAG(hpcd, USB_OTG_GINTSTS_WKUINT);
+     __HAL_PCD_CLEAR_FLAG(hpcd, USB_OTG_GINTSTS_WKUINT16);
     }
     
     /* Handle Suspend Interrupt */

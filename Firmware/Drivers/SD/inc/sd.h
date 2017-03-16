@@ -54,18 +54,25 @@
 #define MSD_PARAMETER_ERROR        0x40
 #define MSD_RESPONSE_FAILURE       0xFF
 
-typedef signed char INT8;
-typedef unsigned char UINT8;
+typedef unsigned long  UINT32;
+typedef unsigned short UINT16;
+typedef unsigned char  UINT8;
 
-typedef int INT;
-typedef unsigned int UINT;
+typedef unsigned long  INT32;
+typedef unsigned short INT16;
+typedef unsigned char  INT8;
 
-typedef long INT32;
-typedef unsigned long UINT32;
-typedef long long INT64;
-typedef unsigned long long UINT64;
 
 extern UINT8 sd_init(void);
-extern UINT32 SD_GetSectorCount(void);
+//extern UINT32 SD_GetSectorCount(void);
+
+extern UINT8 SD_WaitReady(void);							//等待SD卡准备
+extern UINT8 SD_GetResponse(UINT8 Response);					//获得相应
+//extern UINT8 SD_Initialize(void);							//初始化
+extern UINT8 SD_ReadDisk(UINT8*buf,UINT32 sector,UINT8 cnt);		//读块
+extern UINT8 SD_WriteDisk(UINT8*buf,UINT32 sector,UINT8 cnt);		//写块
+extern UINT32 SD_GetSectorCount(void);   					//读扇区数
+extern UINT8 SD_GetCID(UINT8 *cid_data);                     //读SD卡CID
+extern UINT8 SD_GetCSD(UINT8 *csd_data);                     //读SD卡CSD
 #endif
 

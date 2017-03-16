@@ -1,2 +1,166 @@
----- NOKIA5110_LED_ON Matches (1 in 1 files) ----
-Include.h (firmware\drivers\5510\inc):#define NOKIA5110_LED_ON	P2OUT |= BIT0
+---- UINT16 Matches (165 in 20 files) ----
+Cc932.c (middlewares\third_party\fatfs\src\option):	UINT16	dir		/* 0: Unicode to OEMCP, 1: OEMCP to Unicode */
+Cc936.c (middlewares\third_party\fatfs\src\option):	UINT16	dir		/* 0: Unicode to OEMCP, 1: OEMCP to Unicode */
+Cc949.c (middlewares\third_party\fatfs\src\option):	UINT16	dir		/* 0: Unicode to OEMCP, 1: OEMCP to Unicode */
+Cc950.c (middlewares\third_party\fatfs\src\option):	UINT16	dir		/* 0: Unicode to OEMCP, 1: OEMCP to Unicode */
+Ccsbcs.c (middlewares\third_party\fatfs\src\option):	UINT16	dir		/* 0: Unicode to OEMCP, 1: OEMCP to Unicode */
+Der.build_log.htm (mdk-arm\der):..\Firmware\Drivers\SD\src\sd.c(116): error:  #20: identifier "UINT16" is undefined
+Der.build_log.htm (mdk-arm\der):      UINT16 Count=0xFFF;//等待次数                                                       
+Der.build_log.htm (mdk-arm\der):..\Firmware\Drivers\SD\src\sd.c(124): error:  #20: identifier "UINT16" is undefined
+Der.build_log.htm (mdk-arm\der):  UINT168 SD_RecvData(UINT168*buf,UINT16 len)
+Der.build_log.htm (mdk-arm\der):..\Firmware\Drivers\SD\src\sd.c(169): error:  #20: identifier "UINT16" is undefined
+Der.build_log.htm (mdk-arm\der):        UINT16   csize;                                             
+Der.build_log.htm (mdk-arm\der):..\Firmware\Drivers\SD\src\sd.c(178): error:  #20: identifier "UINT16" is undefined
+Der.build_log.htm (mdk-arm\der):                csize    = csd[9] + ((UINT16)csd[8] << 8) + 1;
+Der.build_log.htm (mdk-arm\der):                csize    = csd[9] + ((UINT16)csd[8] << 8) + 1;
+Der.build_log.htm (mdk-arm\der):..\Firmware\Drivers\SD\src\sd.c(185): error:  #20: identifier "UINT16" is undefined
+Der.build_log.htm (mdk-arm\der):                csize    = (csd[8] >> 6) + ((UINT16)csd[7] << 2) + ((UINT16)(csd[6] & 3) << 10) + 1;
+Der.build_log.htm (mdk-arm\der):                csize    = (csd[8] >> 6) + ((UINT16)csd[7] << 2) + ((UINT16)(csd[6] & 3) << 10) + 1;
+Der.build_log.htm (mdk-arm\der):..\Firmware\Drivers\SD\src\sd.c(194): error:  #20: identifier "UINT16" is undefined
+Der.build_log.htm (mdk-arm\der):      UINT16    retry;
+Der.build_log.htm (mdk-arm\der):..\Firmware\Drivers\SD\src\sd.c(196): error:  #20: identifier "UINT16" is undefined
+Der.build_log.htm (mdk-arm\der):      UINT16    i;
+Diskio.c (middlewares\third_party\fatfs\src):	UINT16 count		/* Number of sectors to read */
+Diskio.c (middlewares\third_party\fatfs\src):	UINT16 count        	/* Number of sectors to write */
+Diskio.h (middlewares\third_party\fatfs\src):DRESULT disk_read (BYTE pdrv, BYTE* buff, DWORD sector, UINT16 count);
+Diskio.h (middlewares\third_party\fatfs\src):DRESULT disk_write (BYTE pdrv, const BYTE* buff, DWORD sector, UINT16 count);
+Ff.c (middlewares\third_party\fatfs\src):#define	SS(fs)	((UINT16)_MAX_SS)	/* Fixed sector size */
+Ff.c (middlewares\third_party\fatfs\src):static void gen_numname (BYTE* dst, const BYTE* src, const WCHAR* lfn, UINT16 seq);
+Ff.c (middlewares\third_party\fatfs\src):void mem_cpy (void* dst, const void* src, UINT16 cnt) {
+Ff.c (middlewares\third_party\fatfs\src):void mem_set (void* dst, int val, UINT16 cnt) {
+Ff.c (middlewares\third_party\fatfs\src):int mem_cmp (const void* dst, const void* src, UINT16 cnt) {
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i, be;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i;
+Ff.c (middlewares\third_party\fatfs\src):UINT16 inc_lock (	/* Increment object open counter and returns its index (0:Internal error) */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i			/* Semaphore index (1..) */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 nf;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 wc, bc;
+Ff.c (middlewares\third_party\fatfs\src):			bc = (UINT16)clst; bc += bc / 2;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 bc;
+Ff.c (middlewares\third_party\fatfs\src):			bc = (UINT16)clst; bc += bc / 2;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 idx		/* Index of directory table */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 ic;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 c;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 nent	/* Number of contiguous entries to allocate (1-21) */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 n;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i, s;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i, s;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i, s;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 seq			/* Sequence number */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i, j;
+Ff.c (middlewares\third_party\fatfs\src):		seq = (UINT16)sr;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 n = 11;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 n, nent;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i, ni, si, di;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 ni, si, i;
+Ff.c (middlewares\third_party\fatfs\src):	if ((UINT16)*path < ' ') {				/* Null path name is the origin directory itself */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i;
+Ff.c (middlewares\third_party\fatfs\src):		for (tt = *path; (UINT16)*tt >= (_USE_LFN ? ' ' : '!') && *tt != ':'; tt++) ;	/* Find ':' in the path */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 btr,		/* Number of bytes to read */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16* br		/* Pointer to number of bytes read */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 rcnt, cc;
+Ff.c (middlewares\third_party\fatfs\src):	if (btr > remain) btr = (UINT16)remain;		/* Truncate btr by remaining bytes */
+Ff.c (middlewares\third_party\fatfs\src):		rcnt = SS(fp->fs) - ((UINT16)fp->fptr % SS(fp->fs));	/* Get partial sector data from sector buffer */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 btw,			/* Number of bytes to write */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16* bw			/* Pointer to number of bytes written */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 wcnt, cc;
+Ff.c (middlewares\third_party\fatfs\src):		wcnt = SS(fp->fs) - ((UINT16)fp->fptr % SS(fp->fs));/* Put partial sector into file I/O buffer */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 len		/* Size of path */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i, n;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i, j;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i, j, sl;
+Ff.c (middlewares\third_party\fatfs\src):			if (!w || chk_chr("\"*+,.:;<=>\?[]|\x7F", w) || j >= (UINT16)((w >= 0x100) ? 10 : 11)) /* Reject invalid characters for volume label */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 (*func)(const BYTE*,UINT16),	/* Pointer to the streaming function */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 btf,						/* Number of bytes to forward */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16* bf						/* Pointer to number of bytes forwarded */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 rcnt;
+Ff.c (middlewares\third_party\fatfs\src):	if (btf > remain) btf = (UINT16)remain;			/* Truncate btf by remaining bytes */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 au				/* Size of allocation unit in unit of byte or sector */
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i;
+Ff.c (middlewares\third_party\fatfs\src):	i = (fmt == FS_FAT32) ? au : (UINT16)n_dir;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 i, n, sz_cyl, tot_cyl, b_cyl, e_cyl, p_cyl;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 rc;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 bw;
+Ff.c (middlewares\third_party\fatfs\src):		f_write(pb->fp, pb->buf, (UINT16)i, &bw);
+Ff.c (middlewares\third_party\fatfs\src):		i = (bw == (UINT16)i) ? 0 : -1;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 nw;
+Ff.c (middlewares\third_party\fatfs\src):		&& f_write(pb.fp, pb.buf, (UINT16)pb.idx, &nw) == FR_OK
+Ff.c (middlewares\third_party\fatfs\src):		&& (UINT16)pb.idx == nw) return pb.nchr;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 nw;
+Ff.c (middlewares\third_party\fatfs\src):		&& f_write(pb.fp, pb.buf, (UINT16)pb.idx, &nw) == FR_OK
+Ff.c (middlewares\third_party\fatfs\src):		&& (UINT16)pb.idx == nw) return pb.nchr;
+Ff.c (middlewares\third_party\fatfs\src):	UINT16 nw, i, j, w;
+Ff.c (middlewares\third_party\fatfs\src):		&& f_write(pb.fp, pb.buf, (UINT16)pb.idx, &nw) == FR_OK
+Ff.c (middlewares\third_party\fatfs\src):		&& (UINT16)pb.idx == nw) return pb.nchr;
+Ff.h (middlewares\third_party\fatfs\src):	UINT16	d32[_MAX_SS/4]; /* Force 32bits alignement */     
+Ff.h (middlewares\third_party\fatfs\src):	UINT16	d32[_MAX_SS/4]; /* Force 32bits alignement */     
+Ff.h (middlewares\third_party\fatfs\src):	UINT16	lockid;			/* File lock ID origin from 1 (index of file semaphore table Files[]) */
+Ff.h (middlewares\third_party\fatfs\src):            UINT16     d32[_MAX_SS/4];  /* Force 32bits alignement */  
+Ff.h (middlewares\third_party\fatfs\src):	UINT16	lockid;			/* File lock ID (index of file semaphore table Files[]) */
+Ff.h (middlewares\third_party\fatfs\src):	UINT16 	lfsize;			/* Size of LFN buffer in TCHAR */
+Ff.h (middlewares\third_party\fatfs\src):FRESULT f_read (FIL* fp, void* buff, UINT16 btr, UINT16* br);			/* Read data from a file */
+Ff.h (middlewares\third_party\fatfs\src):FRESULT f_write (FIL* fp, const void* buff, UINT16 btw, UINT16* bw);	/* Write data to a file */
+Ff.h (middlewares\third_party\fatfs\src):FRESULT f_forward (FIL* fp, UINT16(*func)(const BYTE*,UINT16), UINT16 btf, UINT16* bf);	/* Forward data to the stream */
+Ff.h (middlewares\third_party\fatfs\src):FRESULT f_getcwd (TCHAR* buff, UINT16 len);							/* Get current directory */
+Ff.h (middlewares\third_party\fatfs\src):FRESULT f_mkfs (const TCHAR* path, BYTE sfd, UINT16 au);				/* Create a file system on the volume */
+Ff.h (middlewares\third_party\fatfs\src):WCHAR ff_convert (WCHAR chr, UINT16 dir);	/* OEM-Unicode bidirectional conversion */
+Ff.h (middlewares\third_party\fatfs\src):void* ff_memalloc (UINT16 msize);			/* Allocate memory block */
+Ff_gen_drv.h (middlewares\third_party\fatfs\src):  DRESULT (*disk_read)       (BYTE, BYTE*, DWORD, UINT16);       /*!< Read Sector(s)                            */
+Ff_gen_drv.h (middlewares\third_party\fatfs\src):  DRESULT (*disk_write)      (BYTE, const BYTE*, DWORD, UINT16); /*!< Write Sector(s) when _USE_WRITE = 0       */
+Integer.h (middlewares\third_party\fatfs\src):typedef unsigned int	UINT16;
+Sd.c (firmware\drivers\sd\src):UINT168  sdata[512];
+Sd.c (firmware\drivers\sd\src):UINT168  rdata[512];
+Sd.c (firmware\drivers\sd\src):UINT168  SD_Type;
+Sd.c (firmware\drivers\sd\src):UINT168 spi_readwritebyte(UINT168 send_data)
+Sd.c (firmware\drivers\sd\src):    UINT168 read_data=0;
+Sd.c (firmware\drivers\sd\src):    UINT168 ret = HAL_SPI_TransmitReceive(&hspi1,&send_data,&read_data,sizeof(UINT168),1);
+Sd.c (firmware\drivers\sd\src):UINT168 SD_WaitReady(void)
+Sd.c (firmware\drivers\sd\src):	UINT1632 t=0;
+Sd.c (firmware\drivers\sd\src):UINT168 SD_Select(void)
+Sd.c (firmware\drivers\sd\src):UINT168 SD_SendCmd(UINT168 cmd,UINT1632 arg, UINT168 crc)
+Sd.c (firmware\drivers\sd\src):    UINT168 r1;	
+Sd.c (firmware\drivers\sd\src):	UINT168 Retry=0; 
+Sd.c (firmware\drivers\sd\src):UINT168 SD_GetResponse(UINT168 Response)
+Sd.c (firmware\drivers\sd\src):    UINT16 Count=0xFFF;//等待次数	   						  
+Sd.c (firmware\drivers\sd\src):UINT168 SD_RecvData(UINT168*buf,UINT16 len)
+Sd.c (firmware\drivers\sd\src):UINT168 SD_GetCSD(UINT168 *csd_data)
+Sd.c (firmware\drivers\sd\src):    UINT168 r1;	 
+Sd.c (firmware\drivers\sd\src):UINT1632 SD_GetSectorCount(void)
+Sd.c (firmware\drivers\sd\src):    UINT168  csd[16];
+Sd.c (firmware\drivers\sd\src):    UINT1632 Capacity;  
+Sd.c (firmware\drivers\sd\src):    UINT168  n;
+Sd.c (firmware\drivers\sd\src):	  UINT16   csize;  					    
+Sd.c (firmware\drivers\sd\src):		csize    = csd[9] + ((UINT16)csd[8] << 8) + 1;
+Sd.c (firmware\drivers\sd\src):		Capacity = (UINT1632)csize << 10;
+Sd.c (firmware\drivers\sd\src):		csize    = (csd[8] >> 6) + ((UINT16)csd[7] << 2) + ((UINT16)(csd[6] & 3) << 10) + 1;
+Sd.c (firmware\drivers\sd\src):		Capacity = (UINT1632)csize << (n - 9);
+Sd.c (firmware\drivers\sd\src):UINT168 sd_init(void)
+Sd.c (firmware\drivers\sd\src):    UINT16    retry;
+Sd.c (firmware\drivers\sd\src):    UINT168   buf[4];
+Sd.c (firmware\drivers\sd\src):    UINT16    i;
+Sd.h (firmware\drivers\sd\inc):typedef unsigned long  UINT1632;
+Sd.h (firmware\drivers\sd\inc):typedef unsigned short UINT1616;
+Sd.h (firmware\drivers\sd\inc):typedef unsigned char  UINT168;
+Sd.h (firmware\drivers\sd\inc):extern UINT168 sd_init(void);
+Sd.h (firmware\drivers\sd\inc):extern UINT1632 SD_GetSectorCount(void);
+Stm32f105xc.h (drivers\cmsis\device\st\stm32f1xx\include):#define USB_OTG_GINTSTS_WKUINT16_Pos              (31U)                          
+Stm32f105xc.h (drivers\cmsis\device\st\stm32f1xx\include):#define USB_OTG_GINTSTS_WKUINT16_Msk              (0x1U << USB_OTG_GINTSTS_WKUINT16_Pos) /*!< 0x80000000 */
+Stm32f105xc.h (drivers\cmsis\device\st\stm32f1xx\include):#define USB_OTG_GINTSTS_WKUINT16                  USB_OTG_GINTSTS_WKUINT16_Msk     /*!< Resume/remote wakeup detected interrupt */
+Stm32f107xc.h (drivers\cmsis\device\st\stm32f1xx\include):#define USB_OTG_GINTSTS_WKUINT16_Pos              (31U)                          
+Stm32f107xc.h (drivers\cmsis\device\st\stm32f1xx\include):#define USB_OTG_GINTSTS_WKUINT16_Msk              (0x1U << USB_OTG_GINTSTS_WKUINT16_Pos) /*!< 0x80000000 */
+Stm32f107xc.h (drivers\cmsis\device\st\stm32f1xx\include):#define USB_OTG_GINTSTS_WKUINT16                  USB_OTG_GINTSTS_WKUINT16_Msk     /*!< Resume/remote wakeup detected interrupt */
+Stm32f1xx_hal_pcd.c (drivers\stm32f1xx_hal_driver\src):    if(__HAL_PCD_GET_FLAG(hpcd, USB_OTG_GINTSTS_WKUINT16))
+Stm32f1xx_hal_pcd.c (drivers\stm32f1xx_hal_driver\src):     __HAL_PCD_CLEAR_FLAG(hpcd, USB_OTG_GINTSTS_WKUINT16);
+Syscall.c (middlewares\third_party\fatfs\src\option):	UINT16 msize		/* Number of bytes to allocate */
+Task_main.c (firmware\app\task_main\src):    UINT1632 sector_size = 0;
+User_diskio.c (src):DRESULT USER_read (BYTE pdrv, BYTE *buff, DWORD sector, UINT16 count);
+User_diskio.c (src):  DRESULT USER_write (BYTE pdrv, const BYTE *buff, DWORD sector, UINT16 count);  
+User_diskio.c (src):	UINT16 count      /* Number of sectors to read */
+User_diskio.c (src):	UINT16 count          /* Number of sectors to write */

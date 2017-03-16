@@ -22,8 +22,8 @@ typedef unsigned short	WCHAR;
 
 /* These types MUST be 16 bit or 32 bit */
 typedef int				INT;
-typedef unsigned int	UINT;
-
+//typedef unsigned int	UINT16;
+typedef unsigned short UINT16;
 /* These types MUST be 32 bit */
 typedef long			LONG;
 typedef unsigned long	DWORD;

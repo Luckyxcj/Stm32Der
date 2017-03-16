@@ -13892,9 +13892,9 @@ typedef struct
 #define USB_OTG_GINTSTS_SRQINT_Pos              (30U)                          
 #define USB_OTG_GINTSTS_SRQINT_Msk              (0x1U << USB_OTG_GINTSTS_SRQINT_Pos) /*!< 0x40000000 */
 #define USB_OTG_GINTSTS_SRQINT                  USB_OTG_GINTSTS_SRQINT_Msk     /*!< Session request/new session detected interrupt */
-#define USB_OTG_GINTSTS_WKUINT_Pos              (31U)                          
-#define USB_OTG_GINTSTS_WKUINT_Msk              (0x1U << USB_OTG_GINTSTS_WKUINT_Pos) /*!< 0x80000000 */
-#define USB_OTG_GINTSTS_WKUINT                  USB_OTG_GINTSTS_WKUINT_Msk     /*!< Resume/remote wakeup detected interrupt */
+#define USB_OTG_GINTSTS_WKUINT16_Pos              (31U)                          
+#define USB_OTG_GINTSTS_WKUINT16_Msk              (0x1U << USB_OTG_GINTSTS_WKUINT16_Pos) /*!< 0x80000000 */
+#define USB_OTG_GINTSTS_WKUINT16                  USB_OTG_GINTSTS_WKUINT16_Msk     /*!< Resume/remote wakeup detected interrupt */
 
 /********************  Bit definition forUSB_OTG_GINTMSK register  *****************/
 #define USB_OTG_GINTMSK_MMISM_Pos               (1U)                           

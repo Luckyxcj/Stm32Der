@@ -77,7 +77,7 @@ typedef char TCHAR;
 
 typedef struct {
   union{
-	UINT	d32[_MAX_SS/4]; /* Force 32bits alignement */     
+	UINT16	d32[_MAX_SS/4]; /* Force 32bits alignement */     
 	BYTE	d8[_MAX_SS];	/* Disk access window for Directory, FAT (and file data at tiny cfg) */  
   }win;
 	BYTE	fs_type;		/* FAT sub-type (0:Not mounted) */
@@ -118,7 +118,7 @@ typedef struct {
 typedef struct {
 #if !_FS_TINY
   union{  
-	UINT	d32[_MAX_SS/4]; /* Force 32bits alignement */     
+	UINT16	d32[_MAX_SS/4]; /* Force 32bits alignement */     
 	BYTE	d8[_MAX_SS];	/* File data read/write buffer */
   }buf;
 #endif
@@ -139,7 +139,7 @@ typedef struct {
 	DWORD*	cltbl;			/* Pointer to the cluster link map table (Nulled on file open) */
 #endif
 #if _FS_LOCK
-	UINT	lockid;			/* File lock ID origin from 1 (index of file semaphore table Files[]) */
+	UINT16	lockid;			/* File lock ID origin from 1 (index of file semaphore table Files[]) */
 #endif
 
 } FIL;
@@ -151,7 +151,7 @@ typedef struct {
 typedef struct {
 #if !_FS_TINY
   union{  
-            UINT     d32[_MAX_SS/4];  /* Force 32bits alignement */  
+            UINT16     d32[_MAX_SS/4];  /* Force 32bits alignement */  
             BYTE   d8[_MAX_SS];  /* File data read/write buffer */
   }buf;
 #endif   
@@ -164,7 +164,7 @@ typedef struct {
 	BYTE*	dir;			/* Pointer to the current SFN entry in the win[] */
 	BYTE*	fn;				/* Pointer to the SFN (in/out) {file[8],ext[3],status[1]} */
 #if _FS_LOCK
-	UINT	lockid;			/* File lock ID (index of file semaphore table Files[]) */
+	UINT16	lockid;			/* File lock ID (index of file semaphore table Files[]) */
 #endif
 #if _USE_LFN
 	WCHAR*	lfn;			/* Pointer to the LFN working buffer */
@@ -187,7 +187,7 @@ typedef struct {
 	TCHAR	fname[13];		/* Short file name (8.3 format) */
 #if _USE_LFN
 	TCHAR*	lfname;			/* Pointer to the LFN buffer */
-	UINT 	lfsize;			/* Size of LFN buffer in TCHAR */
+	UINT16 	lfsize;			/* Size of LFN buffer in TCHAR */
 #endif
 } FILINFO;
 
@@ -225,9 +225,9 @@ typedef enum {
 
 FRESULT f_open (FIL* fp, const TCHAR* path, BYTE mode);				/* Open or create a file */
 FRESULT f_close (FIL* fp);											/* Close an open file object */
-FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);			/* Read data from a file */
-FRESULT f_write (FIL* fp, const void* buff, UINT btw, UINT* bw);	/* Write data to a file */
-FRESULT f_forward (FIL* fp, UINT(*func)(const BYTE*,UINT), UINT btf, UINT* bf);	/* Forward data to the stream */
+FRESULT f_read (FIL* fp, void* buff, UINT16 btr, UINT16* br);			/* Read data from a file */
+FRESULT f_write (FIL* fp, const void* buff, UINT16 btw, UINT16* bw);	/* Write data to a file */
+FRESULT f_forward (FIL* fp, UINT16(*func)(const BYTE*,UINT16), UINT16 btf, UINT16* bf);	/* Forward data to the stream */
 FRESULT f_lseek (FIL* fp, DWORD ofs);								/* Move file pointer of a file object */
 FRESULT f_truncate (FIL* fp);										/* Truncate file */
 FRESULT f_sync (FIL* fp);											/* Flush cached data of a writing file */
@@ -244,12 +244,12 @@ FRESULT f_chmod (const TCHAR* path, BYTE attr, BYTE mask);			/* Change attribute
 FRESULT f_utime (const TCHAR* path, const FILINFO* fno);			/* Change times-tamp of the file/dir */
 FRESULT f_chdir (const TCHAR* path);								/* Change current directory */
 FRESULT f_chdrive (const TCHAR* path);								/* Change current drive */
-FRESULT f_getcwd (TCHAR* buff, UINT len);							/* Get current directory */
+FRESULT f_getcwd (TCHAR* buff, UINT16 len);							/* Get current directory */
 FRESULT f_getfree (const TCHAR* path, DWORD* nclst, FATFS** fatfs);	/* Get number of free clusters on the drive */
 FRESULT f_getlabel (const TCHAR* path, TCHAR* label, DWORD* vsn);	/* Get volume label */
 FRESULT f_setlabel (const TCHAR* label);							/* Set volume label */
 FRESULT f_mount (FATFS* fs, const TCHAR* path, BYTE opt);			/* Mount/Unmount a logical drive */
-FRESULT f_mkfs (const TCHAR* path, BYTE sfd, UINT au);				/* Create a file system on the volume */
+FRESULT f_mkfs (const TCHAR* path, BYTE sfd, UINT16 au);				/* Create a file system on the volume */
 FRESULT f_fdisk (BYTE pdrv, const DWORD szt[], void* work);			/* Divide a physical drive into some partitions */
 int f_putc (TCHAR c, FIL* fp);										/* Put a character to the file */
 int f_puts (const TCHAR* str, FIL* cp);								/* Put a string to the file */
@@ -280,10 +280,10 @@ DWORD get_fattime (void);
 
 /* Unicode support functions */
 #if _USE_LFN							/* Unicode - OEM code conversion */
-WCHAR ff_convert (WCHAR chr, UINT dir);	/* OEM-Unicode bidirectional conversion */
+WCHAR ff_convert (WCHAR chr, UINT16 dir);	/* OEM-Unicode bidirectional conversion */
 WCHAR ff_wtoupper (WCHAR chr);			/* Unicode upper-case conversion */
 #if _USE_LFN == 3						/* Memory functions */
-void* ff_memalloc (UINT msize);			/* Allocate memory block */
+void* ff_memalloc (UINT16 msize);			/* Allocate memory block */
 void ff_memfree (void* mblock);			/* Free memory block */
 #endif
 #endif

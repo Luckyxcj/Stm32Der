@@ -500,7 +500,7 @@ const WCHAR Tbl[] = {	/*  CP1258(0x80-0xFF) to Unicode conversion table */
 
 WCHAR ff_convert (	/* Converted character, Returns zero on error */
 	WCHAR	chr,	/* Character code to be converted */
-	UINT	dir		/* 0: Unicode to OEMCP, 1: OEMCP to Unicode */
+	UINT16	dir		/* 0: Unicode to OEMCP, 1: OEMCP to Unicode */
 )
 {
 	WCHAR c;
