@@ -65,7 +65,9 @@ typedef unsigned char  INT8;
 
 extern UINT8 sd_init(void);
 //extern UINT32 SD_GetSectorCount(void);
-
+extern void set_spi_speedlow(void);
+extern void set_spi_speedhight(void);
+extern UINT8 spi_readwritebyte(UINT8);
 extern UINT8 SD_WaitReady(void);							//等待SD卡准备
 extern UINT8 SD_GetResponse(UINT8 Response);					//获得相应
 //extern UINT8 SD_Initialize(void);							//初始化

@@ -34,6 +34,7 @@
 "der\list.o"
 "der\lcd_5510_main.o"
 "der\shell.o"
+"der\fat_opt.o"
 "der\commander.o"
 "der\display.o"
 "der\task_main.o"

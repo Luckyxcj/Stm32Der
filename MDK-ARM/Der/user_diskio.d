@@ -50,3 +50,6 @@ der\user_diskio.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 der\user_diskio.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 der\user_diskio.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 der\user_diskio.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+der\user_diskio.o: ..\Firmware\Drivers\SD\inc\sd.h
+der\user_diskio.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+der\user_diskio.o: ../Drivers/CMSIS/Include/core_cmFunc.h

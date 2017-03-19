@@ -347,7 +347,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -365,7 +365,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Drivers/CMSIS/Include;..\Firmware\APP\commander\inc;..\Firmware\APP\display\inc;..\Firmware\APP\task_main\inc;..\Firmware\Drivers\5510\inc;..\Firmware\Drivers\LED\inc;..\Firmware\Drivers\LOG;../Middlewares/Third_Party/FatFs/src;..\Firmware\Drivers\SD\inc</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Drivers/CMSIS/Include;..\Firmware\APP\commander\inc;..\Firmware\APP\display\inc;..\Firmware\APP\task_main\inc;..\Firmware\Drivers\5510\inc;..\Firmware\Drivers\LED\inc;..\Firmware\Drivers\LOG;../Middlewares/Third_Party/FatFs/src;..\Firmware\Drivers\SD\inc;..\Firmware\Drivers\FAT_OP</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -610,6 +610,11 @@
               <FileName>shell.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Firmware\Drivers\LOG\shell.c</FilePath>
+            </File>
+            <File>
+              <FileName>fat_opt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Firmware\Drivers\FAT_OP\fat_opt.c</FilePath>
             </File>
           </Files>
         </Group>

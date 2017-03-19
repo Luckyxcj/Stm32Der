@@ -51,18 +51,19 @@
  * the section contents can be deleted.
  */
 /* USER CODE BEGIN 0 */
+
+
 /* USER CODE END 0 */
 #endif
 
 /* USER CODE BEGIN DECL */
-
 /* Includes ------------------------------------------------------------------*/
 #include <string.h>
 #include "ff_gen_drv.h"
-
+#include "sd.h"
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
-
+#define SD_CARD 0
 /* Private variables ---------------------------------------------------------*/
 /* Disk status */
 static volatile DSTATUS Stat = STA_NOINIT;
@@ -107,6 +108,28 @@ DSTATUS USER_initialize (
 {
   /* USER CODE BEGIN INIT */
     Stat = STA_NOINIT;
+    UINT8 res = 0;
+    switch (pdrv)
+    {
+        case SD_CARD:
+            printf("SD_CARD \n\r");
+            res = sd_init();
+            if (res)
+            {
+                printf("SD_INIT FAIL \n\r");
+                set_spi_speedlow();
+                spi_readwritebyte(0xFF);
+                set_spi_speedhight();
+            }
+            else
+            {
+                printf("SD_INIT OK \n\r");
+                Stat = 0;//~STA_NOINIT;
+            }
+            break;
+        default:
+            res = 1;
+    }
     return Stat;
   /* USER CODE END INIT */
 }
@@ -121,7 +144,7 @@ DSTATUS USER_status (
 )
 {
   /* USER CODE BEGIN STATUS */
-    Stat = STA_NOINIT;
+    Stat = 0;//STA_NOINIT;
     return Stat;
   /* USER CODE END STATUS */
 }
@@ -142,7 +165,36 @@ DRESULT USER_read (
 )
 {
   /* USER CODE BEGIN READ */
-    return RES_OK;
+    UINT8 res = 0;
+    if (!count)
+    {
+        // return param error
+        return RES_PARERR;
+    }
+    switch (pdrv)
+    {
+        case SD_CARD:
+            res = SD_ReadDisk(buff, sector, count);
+            if (res)
+            {
+                printf("SD_READ EX \n\r");
+                set_spi_speedlow();
+                spi_readwritebyte(0xFF);
+                set_spi_speedhight();
+            }
+            break;
+        default :
+            res = 1;
+    }
+    if (res == 0x00)
+    {
+        return RES_OK;
+    }
+    else
+    {
+        return RES_ERROR;
+    }
+    //return RES_OK;
   /* USER CODE END READ */
 }
 
@@ -164,7 +216,27 @@ DRESULT USER_write (
 { 
   /* USER CODE BEGIN WRITE */
   /* USER CODE HERE */
+  UINT8 res = 0;
+  if (!count)
+  {
+    return RES_PARERR;/*return param error*/
+  }
+  switch (pdrv)
+  {
+    case SD_CARD :
+        res = SD_WriteDisk((UINT8*)buff, sector, count);
+        break;
+    default:
+        res = 1;
+  }
+  if (res == 0x00)
+  {
     return RES_OK;
+  }
+  else
+  {
+    return RES_ERROR;
+  }
   /* USER CODE END WRITE */
 }
 #endif /* _USE_WRITE == 1 */
@@ -183,10 +255,50 @@ DRESULT USER_ioctl (
 	void *buff      /* Buffer to send/receive control data */
 )
 {
-  /* USER CODE BEGIN IOCTL */
+    /* USER CODE BEGIN IOCTL */
     DRESULT res = RES_ERROR;
+    if (cmd == SD_CARD)
+    {
+        switch (cmd)
+        {
+            case CTRL_SYNC:
+                #if 0
+                SD_CS_L;
+                if (SD_WaitReady())
+                {
+                    res = RES_OK;
+                }
+                else
+                {
+                    res = RES_ERROR;
+                }
+                SD_CS_H;
+                #endif
+                res = RES_OK;
+                break;
+            case GET_SECTOR_SIZE:
+                *(WORD*)buff = 512;
+                res =RES_OK;
+                break;
+            case GET_BLOCK_SIZE:
+                *(WORD*)buff = 8;
+                res = RES_OK;
+                break;
+            case GET_SECTOR_COUNT:
+                *(DWORD*)buff = SD_GetSectorCount();
+                res = RES_OK;
+                break;
+            default:
+                res = RES_PARERR;
+                break;
+        }
+    }
+    else
+    {
+        res = RES_ERROR;
+    }
     return res;
-  /* USER CODE END IOCTL */
+    /* USER CODE END IOCTL */
 }
 #endif /* _USE_IOCTL == 1 */
 

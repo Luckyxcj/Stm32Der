@@ -835,8 +835,6 @@ FRESULT sync_fs (	/* FR_OK: successful, FR_DISK_ERR: failed */
 )
 {
 	FRESULT res;
-
-
 	res = sync_window(fs);
 	if (res == FR_OK) {
 		/* Update FSINFO sector if needed */
@@ -855,7 +853,9 @@ FRESULT sync_fs (	/* FR_OK: successful, FR_DISK_ERR: failed */
 		}
 		/* Make sure that no pending write process in the physical drive */
 		if (disk_ioctl(fs->drv, CTRL_SYNC, 0) != RES_OK)
+		{
 			res = FR_DISK_ERR;
+		}
 	}
 
 	return res;
@@ -2448,10 +2448,11 @@ FRESULT validate (	/* FR_OK(0): The object is valid, !=0: Invalid */
 {
 	FIL *fil = (FIL*)obj;	/* Assuming offset of .fs and .id in the FIL/DIR structure is identical */
 
-
+   
 	if (!fil || !fil->fs || !fil->fs->fs_type || fil->fs->id != fil->id || (disk_status(fil->fs->drv) & STA_NOINIT))
+	{
 		return FR_INVALID_OBJECT;
-
+	}
 	ENTER_FF(fil->fs);		/* Lock file system */
 
 	return FR_OK;
@@ -2885,8 +2886,6 @@ FRESULT f_sync (
 	FRESULT res;
 	DWORD tm;
 	BYTE *dir;
-
-
 	res = validate(fp);					/* Check validity of the object */
 	if (res == FR_OK) {
 		if (fp->flag & FA__WRITTEN) {	/* Has the file been written? */
@@ -2894,7 +2893,9 @@ FRESULT f_sync (
 #if !_FS_TINY
 			if (fp->flag & FA__DIRTY) {
 				if (disk_write(fp->fs->drv, fp->buf.d8, fp->dsect, 1) != RES_OK)
+				{
 					LEAVE_FF(fp->fs, FR_DISK_ERR);
+				}
 				fp->flag &= ~FA__DIRTY;
 			}
 #endif
@@ -2932,8 +2933,6 @@ FRESULT f_close (
 )
 {
 	FRESULT res;
-
-
 #if !_FS_READONLY
 	res = f_sync(fp);					/* Flush cached data */
 	if (res == FR_OK)

@@ -55,3 +55,12 @@ der\task_main.o: ..\Firmware\Drivers\SD\inc\sd.h
 der\task_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 der\task_main.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 der\task_main.o: ..\Firmware\APP\task_main\inc\task_main.h
+der\task_main.o: ..\Firmware\Drivers\FAT_OP\fat_opt.h
+der\task_main.o: ../Middlewares/Third_Party/FatFs/src/ff.h
+der\task_main.o: ../Middlewares/Third_Party/FatFs/src/integer.h
+der\task_main.o: ../Inc/ffconf.h
+der\task_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+der\task_main.o: ../Drivers/CMSIS/Include/core_cmFunc.h
+der\task_main.o: ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h
+der\task_main.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
+der\task_main.o: E:\keil5\5\ARM\ARMCC\Bin\..\include\string.h
